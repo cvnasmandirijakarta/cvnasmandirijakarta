@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Nas Mandiri Jakarta</title>
+  <link rel="icon" type="image/png" href="IMG_5036-removebg-preview.png">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+  .logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  }
+
+  .logo img {
+  height: 45px;
+  }
+
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: 0.3s;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+      background: #add8e6; 
+      color: black;
+    }
+
+    .btn-consult {
+      border: 2px solid black;
+      padding: 8px 15px;
+      border-radius: 20px;
+      background: white;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-consult:hover {
+      background: #add8e6;
+      color: black;
+    }
+
+  /* Hero Section */
+  .hero {
+  width: 100%;
+  height: 90vh;
+  background: url("BANNER.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+  .hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+  .hero-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 0 15px;
+}
+
+  .hero-text h1 {
+  font-size: 2.5rem;
+  background: rgba(255,255,255,0.85);
+  color: black;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  max-width: 90%;
+}
+
+  .hero-text h2 {
+  font-size: 1.5rem;
+  background: #0011ff;
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  max-width: 90%;
+}
+
+    /* Section umum */
+    section {
+      padding: 60px 15%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    /* Layanan */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .service-box {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .service-box:hover {
+      background: #add8e6;
+      transform: translateY(-5px);
+    }
+
+    /* Artikel */
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .article {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .article img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .article h3 {
+      font-size: 20px;
+      margin: 15px;
+      color: #222;
+    }
+
+    .article p {
+      margin: 0 15px 20px;
+      color: #555;
+    }
+
+    /* Profil */
+  #profil {
+  padding: 60px 15%;
+  text-align: left;   /* tadinya center, ubah jadi left */
+}
+
+  #profil h2 {
+  text-align: center; /* judulnya tetap tengah biar keren */
+  margin-bottom: 20px;
+  color: #333;
+}
+
+  #profil p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  text-align: justify;  /* opsional: bikin rapi rata kanan-kiri */
+}
+  
+  #visi-misi-harapan {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+  #visi-misi-harapan .container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;           
+  flex-wrap: wrap;
+}
+
+  #visi-misi-harapan .box {
+  flex: 1;
+  max-width: 320px;     
+  padding: 20px;
+}
+
+  #visi-misi-harapan .icon {
+  font-size: 55px;      
+  margin-bottom: 20px;  
+  color: #003399;       
+}
+
+  #visi-misi-harapan h3 {
+  font-size: 22px;    
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #111;         
+}
+
+  #visi-misi-harapan p {
+  color: #003399;
+  font-size: 16px;
+  line-height: 1.6;    
+  text-align: justify;  
+}
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .whatsapp a img {
+      width: 55px;
+      height: 55px;
+    }
+
+  .menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block; 
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
+
+  @media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+  .hero-text h1 {
+    font-size: 1.3rem; 
+    padding: 8px 12px;
+  }
+  .hero-text h2 {
+    font-size: 1rem;   
+    padding: 6px 10px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+  <div class="logo">
+    <img src="IMG_5036-removebg-preview.png" alt="Logo" style="height:50px; vertical-align:middle; margin-right:10px;">
+    <span>CV Nas Mandiri Jakarta</span>
+  </div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <ul id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#layanan">Layanan</a></li>
+    <li><a href="#visi-misi-harapan">Visi & Misi</a></li>
+    <li><a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20tanya%20tentang%20jasa%20Anda" target="_blank">Kontak</a></li>
+  </ul>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>AMAN, RESMI DAN AMANAH</h1>
+      <h2>PENYALUR ART & BABY SISTER</h2>
+    </div>
+  </section>
+
+  <!-- Profil -->
+  <section id="profil">
+    <h2>Tentang Kami</h2>
+    <p>
+      CV NAS MANDIRI adalah perusahaan jasa penyalur baby sitter dan asisten rumah tangga (ART) yang siap membantu Anda mendapatkan tenaga kerja terlatih, jujur, dan bertanggung jawab.
+    </p>
+    <p>
+      Kami memahami bahwa setiap keluarga memiliki kebutuhan yang berbeda. Karena itu, kami menyediakan layanan yang fleksibel, mulai dari baby sitter berpengalaman, ART harian atau bulanan, hingga tenaga live-in yang dapat disesuaikan.
+    </p>
+    <p>
+        Setiap tenaga kerja yang kami salurkan telah melalui proses seleksi ketat, pelatihan, dan pembinaan karakter, sehingga siap bekerja dengan sikap profesional dan etika kerja yang baik
+    </p>
+    <p>
+        Dengan pelayanan cepat, aman, dan transparan, kami berkomitmen menjadi mitra rumah tangga yang dapat Anda percaya. Kami juga memberikan layanan purna jual, termasuk garansi dan penggantian tenaga kerja bila diperlukan.
+    </p>
+  </section>
+
+  <!-- Layanan -->
+  <section id="layanan">
+  <h2>Layanan Kami</h2>
+  <div class="services">
+    <div class="service-box">
+      <div class="icon">
+        <img src="icons8-feeding-baby-100.png" alt="Baby Sister">
+      </div>
+      <p>Baby Sister</p>
+      <p></p>
+    </div>
+    <div class="service-box">
+      <div class="icon">
+        <img src="icons8-maid-100.png" alt="Maid">
+      </div>
+      <p>Asisten Rumah Tangga</p>
+    </div>
+</section>
+
+  <!-- Artikel -->
+  <section id="artikel">
+    <h2>Artikel</h2>
+    <div class="articles">
+      <div class="article">
+        <img src="BANNER.jpg" alt="Artikel">
+        <h3>Pentingnya Sertifikasi Tenaga Kerja</h3>
+        <p>Sertifikasi menjadi bukti kompetensi dan meningkatkan kepercayaan perusahaan terhadap tenaga kerja.</p>
+      </div>
+      <div class="article">
+        <img src="PHOTO-2025-08-21-22-53-29.jpg" alt="Artikel">
+        <h3>Cara Memilih Perusahaan Penyalur Resmi</h3>
+        <p>Pastikan perusahaan sudah terdaftar di KEMNAKER dan memiliki izin resmi.</p>
+      </div>
+      <div class="article">
+        <img src="IMG_5035.jpg" alt="Artikel">
+        <h3>Tren Kebutuhan Tenaga Kerja 2025</h3>
+        <p>Digitalisasi mendorong permintaan tenaga kerja yang adaptif dengan teknologi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="visi-misi-harapan">
+  <div class="container">
+    <div class="box">
+      <img src="icons8-paper-plane-100.png" alt="papper plane">
+      <h3>Visi</h3>
+      <p>
+        Menjadi perusahaan penyalur tenaga kerja rumah tangga yang terpercaya, profesional, dan terdepan di Indonesia, dengan menghadirkan solusi yang aman, nyaman, dan berkualitas bagi setiap keluarga.
+      </p>
+    </div>
+    <div class="box">
+      <div class="icon" style="color: deepskyblue;">✔️</div>
+      <h3>Misi</h3>
+      <p>
+        Menyediakan tenaga kerja rumah tangga yang terlatih, berkualitas, bertanggung jawab, serta memberikan layanan yang aman, nyaman, dan beretika.
+      </p>
+    </div>
+  </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 CV Nas Mandiri Jakarta. Semua Hak Dilindungi.
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="whatsapp">
+    <a href="https://wa.me/6282170005709" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat WA">
+    </a>
+  </div>
+
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  </script>
+</body>
+</html>
